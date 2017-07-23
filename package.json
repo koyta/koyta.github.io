@@ -1,0 +1,30 @@
+{
+    "name": "koyta.github.io_grid",
+    "version": "1.0.0",
+    "description": "my portfolio website",
+    "main": "index.js",
+    "directories": {
+        "doc": "doc"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/koyta/koyta.github.io.git"
+    },
+    "keywords": [
+        "Portfolio"
+    ],
+    "dependencies": {
+        "swiper": "^3.4.2"
+    },
+    "devDependencies": {
+    },
+    "author": "Koyta",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/koyta/koyta.github.io/issues"
+    },
+    "homepage": "https://github.com/koyta/koyta.github.io#readme"
+}

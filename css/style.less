@@ -1,0 +1,157 @@
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    h1,
+    h2,
+    h3 {
+        margin: 10px 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.showAside aside {
+    left: 0;
+}
+
+.grid-container {
+}
+
+@aside-width: 350px;
+@aside-padding-horizontal: 35px;
+@aside-border: 5px;
+
+aside {
+    position: absolute;
+    width: 350px;
+    left: -(@aside-border + @aside-padding-horizontal * 2 + @aside-width);
+    transition: left 300ms ease;
+    padding: 100px 35px;
+    color: #000;
+    border-right: 5px solid #000;
+    background-color: #fff;
+    height: 100%;
+    z-index: 999;
+    ul {
+        list-style: circle
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .job-position {
+        text-align: center;
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    .about-me {
+        margin: 20px 0 10px;
+        text-align: center;
+        a,
+        a:visited {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+    }
+    .hider {
+        position: absolute;
+    }
+}
+
+main {
+    padding: 50px;
+    ul {
+        list-style: circle;
+    }
+}
+
+.fixed-bar {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    ul {
+        margin: 0;
+        padding: 0;
+        background-color: #eee;
+        height: 50px;
+        list-style: none;
+        line-height: 50px;
+        text-align: center;
+        li {
+            display: inline-block;
+        }
+    }
+    a,
+    a:visited {
+        line-height: 24px;
+        text-decoration: none;
+        color: #555;
+        &:hover {
+            color: black;
+        }
+        i {
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.fixed-top {
+    top: 0;
+}
+
+.fixed-bottom {
+    bottom: 0;
+}
+
+header {
+    background-color: white;
+    line-height: 100px;
+    z-index: 1;
+    nav {
+        ul li {
+            a,
+            a:visited {
+                color: #ccc;
+                &:hover {
+                    color: #555;
+                }
+
+            }
+        }
+        .current {
+            color: #555;
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    bottom: 0;
+}
+
+.double-slashes {
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+.add {
+    color: #ccc;
+}
