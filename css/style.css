@@ -1,165 +1,143 @@
 * {
-    font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', monospace;
 }
-
 html {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
-
 body {
-    height: 100%;
-    width: 100%;
-    font-size: 18px;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
 }
-
 body h1,
 body h2,
 body h3 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
-
 .hidden {
-    display: none;
+  display: none;
 }
-
+.asideTrigger {
+  cursor: pointer;
+}
 .showAside aside {
-    left: 0;
+  left: 0;
 }
-
 aside {
-    position: absolute;
-    width: 350px;
-    left: -425px;
-    transition: left 300ms ease;
-    padding: 100px 35px;
-    color: #000;
-    border-right: 5px solid #000;
-    background-color: #fff;
-    height: 100%;
-    z-index: 999;
+  position: absolute;
+  width: 350px;
+  left: -425px;
+  transition: left 300ms ease;
+  padding: 100px 35px;
+  color: #000;
+  border-right: 5px solid #000;
+  background-color: #fff;
+  height: 100%;
+  z-index: 101;
 }
-
 aside ul {
-    list-style: circle;
+  list-style: circle;
 }
-
 aside h1 {
-    text-align: center;
+  text-align: center;
 }
-
 aside h2 {
-    font-size: 2em;
+  font-size: 2em;
 }
-
 aside .job-position {
-    text-align: center;
-    font-size: 22px;
-    margin: 10px 0;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
 }
-
 aside .about-me {
-    margin: 20px 0 10px;
-    text-align: center;
+  margin: 20px 0 10px;
+  text-align: center;
 }
-
 aside .about-me a,
 aside .about-me a:visited {
-    color: dodgerblue;
-    text-decoration: none;
+  color: dodgerblue;
+  text-decoration: none;
 }
-
 aside .hider {
-    position: absolute;
+  position: absolute;
 }
-
 main {
-    padding: 50px;
+  padding: 50px;
 }
-
 main ul {
-    list-style: circle;
+  list-style: circle;
 }
-
 .fixed-bar {
-    z-index: 999;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 16px;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 16px;
 }
-
 .fixed-bar ul {
-    margin: 0;
-    padding: 0;
-    background-color: #eee;
-    height: 50px;
-    list-style: none;
-    line-height: 50px;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  height: 50px;
+  list-style: none;
+  line-height: 50px;
+  text-align: center;
 }
-
 .fixed-bar ul li {
-    display: inline-block;
+  display: inline-block;
 }
-
 .fixed-bar a,
 .fixed-bar a:visited {
-    line-height: 24px;
-    text-decoration: none;
-    color: #555;
+  line-height: 24px;
+  text-decoration: none;
+  color: #555;
 }
-
 .fixed-bar a:hover,
 .fixed-bar a:visited:hover {
-    color: black;
+  color: black;
 }
-
 .fixed-bar a i,
 .fixed-bar a:visited i {
-    margin-right: 7px;
-    vertical-align: middle;
+  margin-right: 7px;
+  vertical-align: middle;
 }
-
 .fixed-top {
-    top: 0;
+  top: 0;
 }
-
 .fixed-bottom {
-    bottom: 0;
+  bottom: 0;
 }
-
 header {
-    background-color: white;
-    line-height: 100px;
-    z-index: 1;
+  background-color: white;
+  line-height: 100px;
+  z-index: 1;
 }
-
 header nav ul li a,
 header nav ul li a:visited {
-    color: #ccc;
+  color: #ccc;
 }
-
 header nav ul li a:hover,
 header nav ul li a:visited:hover {
-    color: #555;
+  color: #555;
 }
-
 header nav .current {
-    color: #555;
-    font-weight: bold;
+  color: #555;
+  font-weight: bold;
 }
-
 footer {
-    bottom: 0;
+  bottom: 0;
 }
-
 .double-slashes {
-    font-size: 24px;
-    text-align: center;
-    color: black;
+  font-size: 24px;
+  text-align: center;
+  color: black;
 }
-
 .add {
-    color: #ccc;
+  color: #ccc;
+}
+@media only screen and (max-width: 600px) {
+  .fixed-bar {
+    position: absolute;
+  }
 }
