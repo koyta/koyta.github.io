@@ -48,6 +48,11 @@ aside {
     background-color: #fff;
     height: 100%;
     z-index: 101;
+    & > img {
+        display: block;
+        margin: 0 auto 50px;
+        border-radius: 50%;
+    }
     ul {
         list-style: circle
     }
@@ -89,11 +94,10 @@ main {
     left: 0;
     right: 0;
     font-size: 16px;
+    background-color: #eee;
     ul {
         margin: 0;
         padding: 0;
-        background-color: #eee;
-        height: 50px;
         list-style: none;
         line-height: 50px;
         text-align: center;
@@ -162,7 +166,54 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+    html {
+        height: auto;
+        overflow: auto;
+    }
+
+    body {
+        height: auto;
+        max-width: 100%;
+        font-size: 18px;
+        h1,
+        h2,
+        h3 {
+            margin: 10px 0;
+        }
+    }
+
+    .grid-container {
+        height: auto;
+        display: block;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    aside, main {
+        width: auto;
+        margin: 0 auto;
+        padding: 20px 25px;
+        max-width: 100%;
+    }
     .fixed-bar {
-        position: absolute;
+        position: relative;
+        padding: 10px;
+    }
+
+    .fixed-top {
+        z-index: 1000;
+    }
+
+    aside {
+        position: relative;
+        left: auto;
+        transition: none;
+        color: #000;
+        border-right: 0;
+        background-color: #fff;
+        height: auto;
+        z-index: auto;
     }
 }
