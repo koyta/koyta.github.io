@@ -7,8 +7,6 @@
     <title>Andrey Khlivnyuk. Web developer.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -29,10 +27,7 @@
 
 <!-- Add your site or application content here -->
 <div class="grid-container">
-    <section class="warning hidden">
-        <h2>Please, expand the size of the browser window</h2>
-        <p>For the best web-experience open browser in full screen (or buy 720P display)</p>
-    </section>
+
     <header class="fixed-bar fixed-top">
         <nav>
             <ul>
@@ -53,7 +48,7 @@
     </aside>
 
     <main>
-        <section id="skills" class="skills">
+        <section id="skills" class="skills" data-view="0">
             <h2 class="hidden">A&nbsp;list of&nbsp;what&nbsp;I can&nbsp;do</h2>
             <section>
                 <h3>Web development</h3>
@@ -76,6 +71,9 @@
                 </ul>
             </section>
         </section>
+        <section id="works" class="works" data-view="1">
+
+        </section>
     </main>
 
     <footer class="fixed-bar fixed-bottom">
@@ -88,17 +86,8 @@
     </footer>
 </div>
 
-<!-- Swiper JS -->
-<script src="./js/vendor/swiper.js"></script>
-
-<!--Scroll Magic-->
-<script src="./js/scrollmagic.js"></script>
-
 <!--jQuery-->
-<script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+<script src="./js/vendor/jquery-3.2.1.min.js"></script>
 
 <!--HTML5 Boilerplate-->
 <script src="js/plugins.js"></script>
