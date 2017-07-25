@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 * {
   font-family: 'Inconsolata', monospace;
 }
@@ -26,10 +27,10 @@ body h3 {
 }
 aside {
   position: absolute;
-  width: 350px;
+  max-width: 350px;
   left: -425px;
   transition: left 300ms ease;
-  padding: 100px 35px;
+  padding: 100px 35px 0;
   color: #000;
   border-right: 5px solid #000;
   background-color: #fff;
@@ -75,34 +76,46 @@ main ul {
 }
 .fixed-bar {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  font-size: 16px;
-  background-color: #eee;
 }
-.fixed-bar ul {
+header ul,
+footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 50px;
   text-align: center;
 }
-.fixed-bar ul li {
+header ul li,
+footer ul li {
   display: inline-block;
 }
-.fixed-bar a,
-.fixed-bar a:visited {
+header ul li:last-child,
+footer ul li:last-child {
+  margin: 0;
+}
+header a,
+footer a,
+header a:visited,
+footer a:visited {
   line-height: 24px;
   text-decoration: none;
-  color: #555;
-}
-.fixed-bar a:hover,
-.fixed-bar a:visited:hover {
   color: black;
+  opacity: 0.3;
+  transition: opacity 150ms ease;
 }
-.fixed-bar a i,
-.fixed-bar a:visited i {
+header a:hover,
+footer a:hover,
+header a:visited:hover,
+footer a:visited:hover {
+  opacity: 1;
+}
+header a .fa,
+footer a .fa,
+header a:visited .fa,
+footer a:visited .fa {
   margin-right: 7px;
   vertical-align: middle;
 }
@@ -120,20 +133,13 @@ header {
 header nav ul li {
   margin-right: 25px;
 }
-header nav ul li a,
-header nav ul li a:visited {
-  color: #ccc;
-}
-header nav ul li a:hover,
-header nav ul li a:visited:hover {
-  color: #555;
-}
 header nav .current {
   color: #555;
   font-weight: bold;
 }
 footer {
   bottom: 0;
+  background-color: #eee;
 }
 .double-slashes {
   font-size: 24px;

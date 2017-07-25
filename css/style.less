@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 * {
     font-family: 'Inconsolata', monospace;
 }
@@ -39,10 +41,10 @@ body {
 
 aside {
     position: absolute;
-    width: 350px;
+    max-width: 350px;
     left: -(@aside-border + @aside-padding-horizontal * 2 + @aside-width);
     transition: left 300ms ease;
-    padding: 100px 35px;
+    padding: 100px 35px 0;
     color: #000;
     border-right: 5px solid #000;
     background-color: #fff;
@@ -90,11 +92,12 @@ main {
 
 .fixed-bar {
     z-index: 100;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    font-size: 16px;
-    background-color: #eee;
+}
+
+header, footer {
     ul {
         margin: 0;
         padding: 0;
@@ -103,17 +106,23 @@ main {
         text-align: center;
         li {
             display: inline-block;
+            &:last-child {
+                margin: 0;
+            }
         }
     }
     a,
     a:visited {
         line-height: 24px;
         text-decoration: none;
-        color: #555;
+        color: black;
+        opacity: 0.3;
+        transition: opacity 150ms ease;
         &:hover {
-            color: black;
+            opacity: 1;
         }
-        i {
+
+        .fa {
             margin-right: 7px;
             vertical-align: middle;
         }
@@ -135,14 +144,6 @@ header {
     nav {
         ul li {
             margin-right: 25px;
-            a,
-            a:visited {
-                color: #ccc;
-                &:hover {
-                    color: #555;
-                }
-
-            }
         }
         .current {
             color: #555;
@@ -153,6 +154,7 @@ header {
 
 footer {
     bottom: 0;
+    background-color: #eee;
 }
 
 .double-slashes {
