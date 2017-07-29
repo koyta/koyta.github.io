@@ -15,15 +15,18 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    align-items: center;
-    align-content: stretch;
-    justify-items: center;
 }
 
-main .skills {
+main .centering {
     grid-column: 1/ span 1;
     grid-row: 1/2;
 }
+
+/*main .skills {*/
+    /*grid-column: 1/ span 1;*/
+    /*grid-row: 1/2;*/
+    /*margin: auto auto;*/
+/*}*/
 
 main .works {
     grid-column: 2/ span 1;

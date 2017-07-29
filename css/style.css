@@ -68,6 +68,18 @@ aside .about-me a:visited {
 aside .hider {
   position: absolute;
 }
+.centering {
+  display: flex;
+  flex: 1 0;
+  flex-flow: column nowrap;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 main ul {
   list-style: decimal-leading-zero;
 }
