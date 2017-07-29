@@ -8,7 +8,7 @@ html {
 }
 body {
   height: 100%;
-  width: 100%;
+  width: 200%;
   font-size: 18px;
 }
 body h1,
@@ -68,11 +68,49 @@ aside .about-me a:visited {
 aside .hider {
   position: absolute;
 }
-main {
-  padding: 50px;
-}
 main ul {
   list-style: decimal-leading-zero;
+}
+main .skills,
+main .works {
+  padding: 50px;
+}
+main .works dl {
+  display: block;
+  position: relative;
+  width: 715px;
+  padding: 10px;
+  margin-bottom: 70px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: -7px;
+}
+main .works dl span {
+  min-width: 33.3333%;
+}
+main .works dl dt {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 3px;
+}
+main .works dl dd {
+  display: inline-block;
+  margin-left: 0;
+  font-weight: bold;
+  margin-right: 10px;
+}
+main .works .browser {
+  height: 511px;
+  width: 715px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .works .browser .logotype {
+  position: absolute;
 }
 .fixed-bar {
   z-index: 100;
@@ -156,6 +194,7 @@ footer {
   }
   body {
     height: auto;
+    width: auto;
     max-width: 100%;
     font-size: 18px;
   }

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+@gray: #eee;
+
 * {
     font-family: 'Inconsolata', monospace;
 }
@@ -11,7 +13,7 @@ html {
 
 body {
     height: 100%;
-    width: 100%;
+    width: 200%;
     font-size: 18px;
     h1,
     h2,
@@ -82,11 +84,60 @@ aside {
         position: absolute;
     }
 }
-
+@data-margin: 10px;
 main {
-    padding: 50px;
     ul {
         list-style: decimal-leading-zero;
+    }
+    .skills, .works {
+        padding: 50px;
+    }
+    .skills {
+
+    }
+    .works {
+        dl {
+            display: block;
+            position: relative;
+
+            width: 715px;
+
+            padding: 10px;
+            margin-bottom: 70px;
+
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+
+            text-align: center;
+            text-transform: uppercase;
+            word-spacing: -7px;
+            span {
+                min-width: 33.3333%;
+            }
+
+            dt {
+                display: inline-block;
+                margin-left: @data-margin;
+                margin-right: 3px;
+            }
+            dd {
+                display: inline-block;
+                margin-left: 0;
+                font-weight: bold;
+                margin-right: @data-margin;
+            }
+        }
+        .browser {
+            height: 511px;
+            width: 715px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .logotype {
+                position: absolute;
+            }
+        }
     }
 }
 
@@ -154,7 +205,7 @@ header {
 
 footer {
     bottom: 0;
-    background-color: #eee;
+    background-color: @gray;
 }
 
 .double-slashes {
@@ -175,6 +226,7 @@ footer {
 
     body {
         height: auto;
+        width: auto;
         max-width: 100%;
         font-size: 18px;
         h1,
