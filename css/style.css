@@ -99,9 +99,6 @@ main .works dl {
   text-transform: uppercase;
   word-spacing: -7px;
 }
-main .works dl span {
-  min-width: 33.3333%;
-}
 main .works dl dt {
   display: inline-block;
   margin-left: 10px;
