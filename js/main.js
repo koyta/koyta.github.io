@@ -2,7 +2,9 @@ $(document).ready(function () {
   'use strict';
   //Sidebar reveal
   $(".asideTrigger").click(function () {
+    //TODO Make it with VueJS
     $("body").toggleClass('showAside');
+    $(this).toggleClass('current');
   });
 
     $('header nav a').on('click', function() {
