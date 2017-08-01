@@ -45,6 +45,7 @@ aside {
     position: absolute;
     max-width: 350px;
     left: -(@aside-border + @aside-padding-horizontal * 2 + @aside-width);
+    -webkit-transition: left 300ms ease;
     transition: left 300ms ease;
     padding: 100px 35px 0;
     color: #000;
@@ -86,13 +87,25 @@ aside {
 }
 
 .centering {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex: 1 0;
-    flex-flow: column nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     text-align: left;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -143,9 +156,15 @@ main {
             height: 511px;
             width: 715px;
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             .logotype {
                 position: absolute;
             }
@@ -180,6 +199,7 @@ header, footer {
         text-decoration: none;
         color: black;
         opacity: 0.3;
+        -webkit-transition: opacity 150ms ease;
         transition: opacity 150ms ease;
         &:hover {
             opacity: 1;
@@ -276,6 +296,7 @@ footer {
     aside {
         position: relative;
         left: auto;
+        -webkit-transition: none;
         transition: none;
         color: #000;
         border-right: 0;

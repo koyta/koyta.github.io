@@ -29,6 +29,7 @@ aside {
   position: absolute;
   max-width: 350px;
   left: -425px;
+  -webkit-transition: left 300ms ease;
   transition: left 300ms ease;
   padding: 100px 35px 0;
   color: #000;
@@ -69,12 +70,24 @@ aside .hider {
   position: absolute;
 }
 .centering {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
   flex: 1 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   text-align: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   height: 100%;
   width: 100%;
@@ -115,8 +128,14 @@ main .works .browser {
   height: 511px;
   width: 715px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 main .works .browser .logotype {
@@ -152,6 +171,7 @@ footer a:visited {
   text-decoration: none;
   color: black;
   opacity: 0.3;
+  -webkit-transition: opacity 150ms ease;
   transition: opacity 150ms ease;
 }
 header a:hover,
@@ -239,6 +259,7 @@ footer {
   aside {
     position: relative;
     left: auto;
+    -webkit-transition: none;
     transition: none;
     color: #000;
     border-right: 0;
