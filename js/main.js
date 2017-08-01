@@ -29,7 +29,7 @@ $(document).ready(function () {
         console.log(`Element offset: ${element_offset}`);
 
         // Скроллим
-        $('html').animate({
+        $('html,body').animate({
             scrollLeft: element_offset
         }, 800, 'easeInOutCubic');
 
