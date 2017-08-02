@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-@gray: #eee;
+@gray: #EEEEEE;
+@gray-light: #CCCCCC;
+
+@link-color: dodgerblue;
+
+@aside-width: 350px;
+@aside-padding-horizontal: 35px;
+@aside-border: 5px;
 
 * {
     font-family: 'Inconsolata', monospace;
@@ -8,7 +15,7 @@
 
 html {
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 body {
@@ -34,28 +41,24 @@ body {
     left: 0;
 }
 
-.grid-container {
-}
-
-@aside-width: 350px;
-@aside-padding-horizontal: 35px;
-@aside-border: 5px;
-
 aside {
-    position: absolute;
+    position: fixed;
+    top: 0;
     max-width: 350px;
-    left: -(@aside-border + @aside-padding-horizontal * 2 + @aside-width);
-    -webkit-transition: left 300ms ease;
-    transition: left 300ms ease;
-    padding: 100px 35px 0;
-    color: #000;
-    border-right: 5px solid #000;
-    background-color: #fff;
+    left: -(@aside-border + @aside-padding-horizontal * 2 + @aside-width); //425
+    -webkit-transition: left 400ms ease-in-out;
+    transition: left 400ms ease-in-out;
+    padding: 50px 35px 0;
+    color: black;
+    border-right: 5px solid black;
+    background-color: white;
     height: 100%;
     z-index: 101;
     & > img {
+        height: auto;
+        max-width: 100%;
         display: block;
-        margin: 0 auto 50px;
+        margin: 0 auto 15%;
         border-radius: 50%;
     }
     ul {
@@ -69,7 +72,7 @@ aside {
     }
     .job-position {
         text-align: center;
-        font-size: 22px;
+        font-size: 1.2em;
         margin: 10px 0;
     }
     .about-me {
@@ -77,7 +80,7 @@ aside {
         text-align: center;
         a,
         a:visited {
-            color: dodgerblue;
+            color: @link-color;
             text-decoration: none;
         }
     }
@@ -118,9 +121,6 @@ main {
     }
     .skills, .works {
         padding: 50px;
-    }
-    .skills {
-
     }
     .works {
         dl {
@@ -194,7 +194,9 @@ header, footer {
         }
     }
     a,
-    a:visited {
+    a:link,
+    a:visited,
+    button {
         line-height: 24px;
         text-decoration: none;
         color: black;
@@ -225,8 +227,14 @@ header {
     line-height: 100px;
     z-index: 1;
     nav {
-        ul li {
+        ul {
+            button {
+                background: none;
+                border: none;
+            }
+            li {
             margin-right: 25px;
+            }
         }
         .current {
             opacity: 1;
@@ -248,7 +256,7 @@ footer {
 }
 
 .add {
-    color: #ccc;
+    color: @gray-light;
 }
 
 @media only screen and (max-width: 600px) {

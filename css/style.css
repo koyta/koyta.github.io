@@ -4,7 +4,6 @@
 }
 html {
   height: 100%;
-  overflow: hidden;
 }
 body {
   height: 100%;
@@ -26,21 +25,24 @@ body h3 {
   left: 0;
 }
 aside {
-  position: absolute;
+  position: fixed;
+  top: 0;
   max-width: 350px;
   left: -425px;
-  -webkit-transition: left 300ms ease;
-  transition: left 300ms ease;
-  padding: 100px 35px 0;
-  color: #000;
-  border-right: 5px solid #000;
-  background-color: #fff;
+  -webkit-transition: left 400ms ease-in-out;
+  transition: left 400ms ease-in-out;
+  padding: 50px 35px 0;
+  color: black;
+  border-right: 5px solid black;
+  background-color: white;
   height: 100%;
   z-index: 101;
 }
 aside > img {
+  height: auto;
+  max-width: 100%;
   display: block;
-  margin: 0 auto 50px;
+  margin: 0 auto 15%;
   border-radius: 50%;
 }
 aside ul {
@@ -54,7 +56,7 @@ aside h2 {
 }
 aside .job-position {
   text-align: center;
-  font-size: 22px;
+  font-size: 1.2em;
   margin: 10px 0;
 }
 aside .about-me {
@@ -165,8 +167,12 @@ footer ul li:last-child {
 }
 header a,
 footer a,
+header a:link,
+footer a:link,
 header a:visited,
-footer a:visited {
+footer a:visited,
+header button,
+footer button {
   line-height: 24px;
   text-decoration: none;
   color: black;
@@ -176,14 +182,22 @@ footer a:visited {
 }
 header a:hover,
 footer a:hover,
+header a:link:hover,
+footer a:link:hover,
 header a:visited:hover,
-footer a:visited:hover {
+footer a:visited:hover,
+header button:hover,
+footer button:hover {
   opacity: 1;
 }
 header a .fa,
 footer a .fa,
+header a:link .fa,
+footer a:link .fa,
 header a:visited .fa,
-footer a:visited .fa {
+footer a:visited .fa,
+header button .fa,
+footer button .fa {
   margin-right: 7px;
   vertical-align: middle;
 }
@@ -198,6 +212,10 @@ header {
   line-height: 100px;
   z-index: 1;
 }
+header nav ul button {
+  background: none;
+  border: none;
+}
 header nav ul li {
   margin-right: 25px;
 }
@@ -208,7 +226,7 @@ header nav .current {
 }
 footer {
   bottom: 0;
-  background-color: #eee;
+  background-color: #EEEEEE;
 }
 .double-slashes {
   font-size: 24px;
@@ -216,7 +234,7 @@ footer {
   color: black;
 }
 .add {
-  color: #ccc;
+  color: #CCCCCC;
 }
 @media only screen and (max-width: 600px) {
   html {
