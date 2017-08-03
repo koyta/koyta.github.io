@@ -4,6 +4,7 @@
 }
 html {
   height: 100%;
+  overflow: hidden;
 }
 body {
   height: 100%;
@@ -15,8 +16,21 @@ body h2,
 body h3 {
   margin: 10px 0;
 }
-.hidden {
+body .hidden {
   display: none;
+}
+body .warning {
+  text-align: center;
+}
+body .alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+  padding: 1em;
+  z-index: 105;
+  background-color: #2a2a2a;
+  color: crimson;
 }
 .asideTrigger {
   cursor: pointer;
